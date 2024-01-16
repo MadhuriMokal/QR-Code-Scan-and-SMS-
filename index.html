@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Personal Information Form</h2>
+        <form id="infoForm">
+            <label for="fullName">Full Name:</label>
+           <input type="text" id="fullName" name="fullName" required autocomplete="name">
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required autocomplete="tel">
+            <small>Format: 1234567890</small>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required autocomplete="address"></textarea>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+
+            
+        </form>
+
+        <div id="options" style="display: none;">
+            <label><input type="radio" name="options" value="option1"> Option 1: Scan QR Code</label>
+            <label><input type="radio" name="options" value="option2"> Option 2: Generate QR Code</label>
+            <label><input type="radio" name="options" value="option3"> Option 3: Welcome</label>
+            <label><input type="radio" name="options" value="option4"> Option 4: Hello</label>
+            <label><input type="radio" name="options" value="option5"> Option 5: Good Morning</label>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
